@@ -195,15 +195,15 @@ def _cmd_verify_audit(args: argparse.Namespace) -> int:
             return 2
         try:
             obj = json.loads(latest_text)
-            raw_bundle = obj.get("bundle", "")
-            if not isinstance(raw_bundle, str):
-                raise ValueError("bundle debe ser string")
-            bundle_name = raw_bundle.strip()
+            bundle_name = obj.get("bundle", "")
+            if not isinstance(bundle_name, str):
+                raise ValueError("bundle debe ser una cadena de texto")
+            bundle_name = bundle_name.strip()
         except json.JSONDecodeError:
             print("ERROR: latest.json inválido (JSON)")
             return 2
         except ValueError:
-            print("ERROR: bundle debe ser string en latest.json")
+            print("ERROR: el campo bundle debe ser una cadena de texto en latest.json")
             return 2
         bundle_rel = Path(bundle_name)
         if (
