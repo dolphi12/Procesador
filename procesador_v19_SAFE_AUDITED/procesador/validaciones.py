@@ -1,1 +1,58 @@
-def validate_input(value, expected_type):\n    """Validate input value against the expected type."""\n    if not isinstance(value, expected_type):\n        raise TypeError(f"Expected value of type {expected_type.__name__}, but got {type(value).__name__}.")\n    return value\n\ndef validate_non_empty_string(value):\n    """Validate that the string is not empty."""\n    validate_input(value, str)\n    if not value.strip():\n        raise ValueError("String cannot be empty or just whitespace.")\n    return value.strip()\n\ndef validate_positive_integer(value):\n    """Validate that the value is a positive integer."""\n    validate_input(value, int)\n    if value <= 0:\n        raise ValueError("Integer must be greater than zero.")\n    return value\n\ndef validate_range(value, min_value, max_value):\n    """Validate that the value is within the specified range."""\n    validate_input(value, (int, float))\n    if not (min_value <= value <= max_value):\n        raise ValueError(f"Value {value} must be between {min_value} and {max_value}.")\n    return value\n
+"""Funciones de validación de entrada para el procesador de asistencia."""
+
+from __future__ import annotations
+
+
+def validate_input(value: object, expected_type: type | tuple[type, ...]) -> object:
+    """Validate input value against the expected type."""
+    if not isinstance(value, expected_type):
+        if isinstance(expected_type, tuple):
+            names = ", ".join(t.__name__ for t in expected_type)
+        else:
+            names = expected_type.__name__
+        raise TypeError(
+            f"Expected value of type {names}, but got {type(value).__name__}."
+        )
+    return value
+
+
+def validate_non_empty_string(value: object) -> str:
+    """Validate that the string is not empty."""
+    validate_input(value, str)
+    s = str(value).strip()
+    if not s:
+        raise ValueError("String cannot be empty or just whitespace.")
+    return s
+
+
+def validate_positive_integer(value: object) -> int:
+    """Validate that the value is a positive integer."""
+    validate_input(value, int)
+    if value <= 0:
+        raise ValueError("Integer must be greater than zero.")
+    return value
+
+
+def validate_range(value: int | float, min_value: int | float, max_value: int | float) -> int | float:
+    """Validate that the value is within the specified range."""
+    validate_input(value, (int, float))
+    if not (min_value <= value <= max_value):
+        raise ValueError(f"Value {value} must be between {min_value} and {max_value}.")
+    return value
+
+
+def validate_non_negative_int(value: object, name: str = "value") -> int:
+    """Validate that the value is a non-negative integer (>= 0)."""
+    if not isinstance(value, int):
+        raise TypeError(f"{name}: expected int, got {type(value).__name__}.")
+    if value < 0:
+        raise ValueError(f"{name}: must be >= 0, got {value}.")
+    return value
+
+
+def validate_weekday(value: int, name: str = "week_start_dow") -> int:
+    """Validate weekday number (0=Monday .. 6=Sunday)."""
+    validate_non_negative_int(value, name)
+    if value > 6:
+        raise ValueError(f"{name}: must be 0-6, got {value}.")
+    return value

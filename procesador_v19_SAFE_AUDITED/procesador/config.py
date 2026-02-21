@@ -10,6 +10,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List
 from .utils import backup_file, chmod_restringido
+from .validaciones import validate_non_negative_int, validate_weekday
 
 
 @dataclass
@@ -164,6 +165,25 @@ def cargar_config(script_dir: Path) -> AppConfig:
     cfg.column_widths = excel.get("column_widths", cfg.column_widths) or cfg.column_widths
     # Patrones (regex) para columnas dinámicas
     cfg.column_width_patterns = excel.get("column_width_patterns", cfg.column_width_patterns) or cfg.column_width_patterns
+
+    # Validate numeric config bounds
+    try:
+        validate_non_negative_int(cfg.umbral_extra_min, "umbral_extra_min")
+        validate_non_negative_int(cfg.redondeo_extra_step_min, "redondeo_extra_step_min")
+        validate_non_negative_int(cfg.tope_descuento_comida_min, "tope_descuento_comida_min")
+        validate_non_negative_int(cfg.umbral_comida_media_hora_min, "umbral_comida_media_hora_min")
+        validate_non_negative_int(cfg.id_min_width, "id_min_width")
+        validate_weekday(cfg.week_start_dow)
+    except (TypeError, ValueError) as exc:
+        log_exception(f"Valor inválido en config, usando defaults: {exc}", level=logging.WARNING)
+        defaults = AppConfig()
+        cfg.umbral_extra_min = max(0, cfg.umbral_extra_min)
+        cfg.redondeo_extra_step_min = max(0, cfg.redondeo_extra_step_min)
+        cfg.tope_descuento_comida_min = max(0, cfg.tope_descuento_comida_min)
+        cfg.umbral_comida_media_hora_min = max(0, cfg.umbral_comida_media_hora_min)
+        cfg.id_min_width = max(0, cfg.id_min_width)
+        cfg.week_start_dow = cfg.week_start_dow % 7 if 0 <= cfg.week_start_dow else defaults.week_start_dow
+
     return cfg
 
 

@@ -10,7 +10,7 @@ import shutil
 import tempfile
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Optional
+from typing import List, Optional
 import hashlib
 import hmac
 import secrets
@@ -245,9 +245,6 @@ def get_or_create_audit_key(
 
     Retorna: (key_hex, key_id) donde key_id es una huella corta (8 chars).
     """
-    # Backward compat: si el caller aún pasa script_dir pero no key_dir, NO guardamos ahí
-    # para evitar distribuir secretos con el código. Solo usar script_dir si explícitamente
-    # se pasa key_dir=script_dir desde arriba.
     # Backward compat: si el caller aún pasa script_dir pero no key_dir, NO guardamos ahí
     # para evitar distribuir secretos con el código. Solo usar script_dir si explícitamente
     # se pasa key_dir=script_dir desde arriba.
