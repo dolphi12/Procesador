@@ -175,7 +175,8 @@ def _cmd_verify_audit(args: argparse.Namespace) -> int:
             return 2
     else:
         base = Path(args.latest_dir)
-        latest = base / "auditoria" / "latest.json"
+        audit_dir = base / "auditoria"
+        latest = audit_dir / "latest.json"
         if not latest.exists():
             print(f"ERROR: no existe {latest}")
             return 2
@@ -188,23 +189,29 @@ def _cmd_verify_audit(args: argparse.Namespace) -> int:
             obj = json.loads(latest_text)
             raw_bundle = obj.get("bundle", "")
             if not isinstance(raw_bundle, str):
-                raise ValueError("bundle no es string")
+                raise ValueError("bundle debe ser string")
             bundle_name = raw_bundle.strip()
         except json.JSONDecodeError:
             print("ERROR: latest.json inválido (JSON)")
             return 2
         except ValueError:
-            print("ERROR: bundle inválido en latest.json")
+            print("ERROR: bundle debe ser string en latest.json")
             return 2
-        bundle_path = Path(bundle_name)
+        bundle_rel = Path(bundle_name)
         if (
             not bundle_name
-            or bundle_path.is_absolute()
-            or ".." in bundle_path.parts
+            or bundle_rel.is_absolute()
+            or ".." in bundle_rel.parts
         ):
             print("ERROR: bundle inválido en latest.json")
             return 2
-        bundle = base / "auditoria" / bundle_path
+        audit_dir_resolved = audit_dir.resolve()
+        bundle = (audit_dir / bundle_rel).resolve()
+        try:
+            bundle.relative_to(audit_dir_resolved)
+        except ValueError:
+            print("ERROR: bundle inválido en latest.json")
+            return 2
         if not bundle.exists() or bundle.is_dir():
             print(f"ERROR: bundle no encontrado: {bundle}")
             return 2
