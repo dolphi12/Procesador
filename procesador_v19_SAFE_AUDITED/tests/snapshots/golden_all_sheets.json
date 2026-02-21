@@ -1,0 +1,1246 @@
+{
+  "PROCESADO": {
+    "Reporte": {
+      "columns": [
+        "ID",
+        "Fecha",
+        "Nombre",
+        "Pases",
+        "NoLaborado",
+        "Entrada",
+        "Salida a comer",
+        "Regreso de comer",
+        "Salida a cenar",
+        "Regreso de cenar",
+        "Salida",
+        "Horas trabajadas",
+        "Horas extra",
+        "Notas",
+        "Ajuste manual",
+        "Nota ajuste"
+      ],
+      "row_count": 7,
+      "rows": [
+        {
+          "ID": "003",
+          "Fecha": "2026-01-28",
+          "Nombre": "Empleado A",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "09:00",
+          "Salida a comer": "13:00",
+          "Regreso de comer": "13:30",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "18:00",
+          "Horas trabajadas": "08:30",
+          "Horas extra": "00:30",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        },
+        {
+          "ID": "003",
+          "Fecha": "2026-01-29",
+          "Nombre": "Empleado A",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "09:05",
+          "Salida a comer": "13:05",
+          "Regreso de comer": "13:35",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "18:10",
+          "Horas trabajadas": "08:35",
+          "Horas extra": "00:35",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        },
+        {
+          "ID": "115",
+          "Fecha": "2026-01-28",
+          "Nombre": "Empleado B",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "22:00",
+          "Salida a comer": "",
+          "Regreso de comer": "",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "02:00",
+          "Horas trabajadas": "04:00",
+          "Horas extra": "00:00",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        },
+        {
+          "ID": "115",
+          "Fecha": "2026-01-29",
+          "Nombre": "Empleado B",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "22:10",
+          "Salida a comer": "",
+          "Regreso de comer": "",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "02:05",
+          "Horas trabajadas": "03:55",
+          "Horas extra": "00:00",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        },
+        {
+          "ID": "124",
+          "Fecha": "2026-01-28",
+          "Nombre": "Empleado C",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "09:00",
+          "Salida a comer": "",
+          "Regreso de comer": "",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "18:00",
+          "Horas trabajadas": "09:00",
+          "Horas extra": "01:00",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        },
+        {
+          "ID": "124",
+          "Fecha": "2026-01-29",
+          "Nombre": "Empleado C",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "09:00",
+          "Salida a comer": "",
+          "Regreso de comer": "",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "13:00",
+          "Horas trabajadas": "04:00",
+          "Horas extra": "00:00",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        },
+        {
+          "ID": "999",
+          "Fecha": "2026-01-28",
+          "Nombre": "Empleado X",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "09:00",
+          "Salida a comer": "",
+          "Regreso de comer": "",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "",
+          "Horas trabajadas": "00:00",
+          "Horas extra": "00:00",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        }
+      ]
+    },
+    "RESUMEN_SEMANAL": {
+      "columns": [
+        "ID",
+        "Nombre",
+        "Semana",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+        "Domingo",
+        "Lunes",
+        "Martes",
+        "Dias_presentes",
+        "Total horas trabajadas",
+        "Total horas extra",
+        "Faltas",
+        "Rango semana"
+      ],
+      "row_count": 4,
+      "rows": [
+        {
+          "ID": "003",
+          "Nombre": "Empleado A",
+          "Semana": "2026-WK-20260128",
+          "Miércoles": "08:30",
+          "Jueves": "08:35",
+          "Viernes": "",
+          "Sábado": "",
+          "Domingo": "",
+          "Lunes": "",
+          "Martes": "",
+          "Dias_presentes": "2",
+          "Total horas trabajadas": "17:05",
+          "Total horas extra": "01:05",
+          "Faltas": "5",
+          "Rango semana": "2026-01-28 a 2026-02-03"
+        },
+        {
+          "ID": "115",
+          "Nombre": "Empleado B",
+          "Semana": "2026-WK-20260128",
+          "Miércoles": "04:00",
+          "Jueves": "03:55",
+          "Viernes": "",
+          "Sábado": "",
+          "Domingo": "",
+          "Lunes": "",
+          "Martes": "",
+          "Dias_presentes": "2",
+          "Total horas trabajadas": "07:55",
+          "Total horas extra": "00:00",
+          "Faltas": "5",
+          "Rango semana": "2026-01-28 a 2026-02-03"
+        },
+        {
+          "ID": "124",
+          "Nombre": "Empleado C",
+          "Semana": "2026-WK-20260128",
+          "Miércoles": "09:00",
+          "Jueves": "04:00",
+          "Viernes": "",
+          "Sábado": "",
+          "Domingo": "",
+          "Lunes": "",
+          "Martes": "",
+          "Dias_presentes": "2",
+          "Total horas trabajadas": "13:00",
+          "Total horas extra": "01:00",
+          "Faltas": "5",
+          "Rango semana": "2026-01-28 a 2026-02-03"
+        },
+        {
+          "ID": "999",
+          "Nombre": "Empleado X",
+          "Semana": "2026-WK-20260128",
+          "Miércoles": "00:00",
+          "Jueves": "",
+          "Viernes": "",
+          "Sábado": "",
+          "Domingo": "",
+          "Lunes": "",
+          "Martes": "",
+          "Dias_presentes": "1",
+          "Total horas trabajadas": "00:00",
+          "Total horas extra": "00:00",
+          "Faltas": "6",
+          "Rango semana": "2026-01-28 a 2026-02-03"
+        }
+      ]
+    },
+    "RESUMEN_MENSUAL": {
+      "columns": [
+        "ID",
+        "Nombre",
+        "Mes",
+        "Dias_presentes",
+        "Total horas trabajadas",
+        "Total horas extra",
+        "Faltas"
+      ],
+      "row_count": 4,
+      "rows": [
+        {
+          "ID": "003",
+          "Nombre": "Empleado A",
+          "Mes": "2026-01",
+          "Dias_presentes": "2",
+          "Total horas trabajadas": "17:05",
+          "Total horas extra": "01:05",
+          "Faltas": "2"
+        },
+        {
+          "ID": "115",
+          "Nombre": "Empleado B",
+          "Mes": "2026-01",
+          "Dias_presentes": "2",
+          "Total horas trabajadas": "07:55",
+          "Total horas extra": "00:00",
+          "Faltas": "2"
+        },
+        {
+          "ID": "124",
+          "Nombre": "Empleado C",
+          "Mes": "2026-01",
+          "Dias_presentes": "2",
+          "Total horas trabajadas": "13:00",
+          "Total horas extra": "01:00",
+          "Faltas": "2"
+        },
+        {
+          "ID": "999",
+          "Nombre": "Empleado X",
+          "Mes": "2026-01",
+          "Dias_presentes": "1",
+          "Total horas trabajadas": "00:00",
+          "Total horas extra": "00:00",
+          "Faltas": "3"
+        }
+      ]
+    },
+    "DETALLE_FALTAS": {
+      "columns": [
+        "ID",
+        "Nombre",
+        "Fecha",
+        "Semana",
+        "Mes"
+      ],
+      "row_count": 21,
+      "rows": [
+        {
+          "ID": "003",
+          "Nombre": "Empleado A",
+          "Fecha": "2026-01-30",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "ID": "003",
+          "Nombre": "Empleado A",
+          "Fecha": "2026-01-31",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "ID": "003",
+          "Nombre": "Empleado A",
+          "Fecha": "2026-02-01",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "ID": "003",
+          "Nombre": "Empleado A",
+          "Fecha": "2026-02-02",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "ID": "003",
+          "Nombre": "Empleado A",
+          "Fecha": "2026-02-03",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "ID": "115",
+          "Nombre": "Empleado B",
+          "Fecha": "2026-01-30",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "ID": "115",
+          "Nombre": "Empleado B",
+          "Fecha": "2026-01-31",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "ID": "115",
+          "Nombre": "Empleado B",
+          "Fecha": "2026-02-01",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "ID": "115",
+          "Nombre": "Empleado B",
+          "Fecha": "2026-02-02",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "ID": "115",
+          "Nombre": "Empleado B",
+          "Fecha": "2026-02-03",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "ID": "124",
+          "Nombre": "Empleado C",
+          "Fecha": "2026-01-30",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "ID": "124",
+          "Nombre": "Empleado C",
+          "Fecha": "2026-01-31",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "ID": "124",
+          "Nombre": "Empleado C",
+          "Fecha": "2026-02-01",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "ID": "124",
+          "Nombre": "Empleado C",
+          "Fecha": "2026-02-02",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "ID": "124",
+          "Nombre": "Empleado C",
+          "Fecha": "2026-02-03",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "ID": "999",
+          "Nombre": "Empleado X",
+          "Fecha": "2026-01-29",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "ID": "999",
+          "Nombre": "Empleado X",
+          "Fecha": "2026-01-30",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "ID": "999",
+          "Nombre": "Empleado X",
+          "Fecha": "2026-01-31",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "ID": "999",
+          "Nombre": "Empleado X",
+          "Fecha": "2026-02-01",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "ID": "999",
+          "Nombre": "Empleado X",
+          "Fecha": "2026-02-02",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "ID": "999",
+          "Nombre": "Empleado X",
+          "Fecha": "2026-02-03",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        }
+      ]
+    },
+    "INCIDENCIAS": {
+      "columns": [
+        "ID",
+        "Fecha",
+        "Nombre",
+        "Notas"
+      ],
+      "row_count": 1,
+      "rows": [
+        {
+          "ID": "124",
+          "Fecha": "2026-01-28",
+          "Nombre": "Empleado C",
+          "Notas": ""
+        }
+      ]
+    },
+    "RESUM_SEM_CHECADAS": {
+      "columns": [
+        "ID",
+        "Nombre",
+        "Semana",
+        "Mié 28/01 Entrada",
+        "Mié 28/01 Salida a comer",
+        "Mié 28/01 Regreso de comer",
+        "Mié 28/01 Salida a cenar",
+        "Mié 28/01 Regreso de cenar",
+        "Mié 28/01 Salida",
+        "Jue 29/01 Entrada",
+        "Jue 29/01 Salida a comer",
+        "Jue 29/01 Regreso de comer",
+        "Jue 29/01 Salida a cenar",
+        "Jue 29/01 Regreso de cenar",
+        "Jue 29/01 Salida"
+      ],
+      "row_count": 4,
+      "rows": [
+        {
+          "ID": "003",
+          "Nombre": "Empleado A",
+          "Semana": "2026-01-28 a 2026-02-03",
+          "Mié 28/01 Entrada": "09:00",
+          "Mié 28/01 Salida a comer": "13:00",
+          "Mié 28/01 Regreso de comer": "13:30",
+          "Mié 28/01 Salida a cenar": "",
+          "Mié 28/01 Regreso de cenar": "",
+          "Mié 28/01 Salida": "18:00",
+          "Jue 29/01 Entrada": "09:05",
+          "Jue 29/01 Salida a comer": "13:05",
+          "Jue 29/01 Regreso de comer": "13:35",
+          "Jue 29/01 Salida a cenar": "",
+          "Jue 29/01 Regreso de cenar": "",
+          "Jue 29/01 Salida": "18:10"
+        },
+        {
+          "ID": "115",
+          "Nombre": "Empleado B",
+          "Semana": "2026-01-28 a 2026-02-03",
+          "Mié 28/01 Entrada": "22:00",
+          "Mié 28/01 Salida a comer": "",
+          "Mié 28/01 Regreso de comer": "",
+          "Mié 28/01 Salida a cenar": "",
+          "Mié 28/01 Regreso de cenar": "",
+          "Mié 28/01 Salida": "02:00",
+          "Jue 29/01 Entrada": "22:10",
+          "Jue 29/01 Salida a comer": "",
+          "Jue 29/01 Regreso de comer": "",
+          "Jue 29/01 Salida a cenar": "",
+          "Jue 29/01 Regreso de cenar": "",
+          "Jue 29/01 Salida": "02:05"
+        },
+        {
+          "ID": "124",
+          "Nombre": "Empleado C",
+          "Semana": "2026-01-28 a 2026-02-03",
+          "Mié 28/01 Entrada": "09:00",
+          "Mié 28/01 Salida a comer": "",
+          "Mié 28/01 Regreso de comer": "",
+          "Mié 28/01 Salida a cenar": "",
+          "Mié 28/01 Regreso de cenar": "",
+          "Mié 28/01 Salida": "18:00",
+          "Jue 29/01 Entrada": "09:00",
+          "Jue 29/01 Salida a comer": "",
+          "Jue 29/01 Regreso de comer": "",
+          "Jue 29/01 Salida a cenar": "",
+          "Jue 29/01 Regreso de cenar": "",
+          "Jue 29/01 Salida": "13:00"
+        },
+        {
+          "ID": "999",
+          "Nombre": "Empleado X",
+          "Semana": "2026-01-28 a 2026-02-03",
+          "Mié 28/01 Entrada": "09:00",
+          "Mié 28/01 Salida a comer": "",
+          "Mié 28/01 Regreso de comer": "",
+          "Mié 28/01 Salida a cenar": "",
+          "Mié 28/01 Regreso de cenar": "",
+          "Mié 28/01 Salida": "",
+          "Jue 29/01 Entrada": "",
+          "Jue 29/01 Salida a comer": "",
+          "Jue 29/01 Regreso de comer": "",
+          "Jue 29/01 Salida a cenar": "",
+          "Jue 29/01 Regreso de cenar": "",
+          "Jue 29/01 Salida": ""
+        }
+      ]
+    },
+    "CONTROL": {
+      "columns": [
+        "Sección",
+        "Campo",
+        "Valor"
+      ],
+      "row_count": 11,
+      "rows": [
+        {
+          "Sección": "EJECUCION",
+          "Campo": "run_id",
+          "Valor": ""
+        },
+        {
+          "Sección": "EJECUCION",
+          "Campo": "started_at",
+          "Valor": ""
+        },
+        {
+          "Sección": "EJECUCION",
+          "Campo": "version",
+          "Valor": "19.0.0-migracion"
+        },
+        {
+          "Sección": "EJECUCION",
+          "Campo": "input_sha256",
+          "Valor": ""
+        },
+        {
+          "Sección": "AUDITORIA",
+          "Campo": "Ediciones registradas",
+          "Valor": "0"
+        },
+        {
+          "Sección": "RESUMEN",
+          "Campo": "Filas en Reporte",
+          "Valor": "7"
+        },
+        {
+          "Sección": "RESUMEN",
+          "Campo": "Incidencias RRHH",
+          "Valor": "0"
+        },
+        {
+          "Sección": "RESUMEN",
+          "Campo": "Faltas (detalle)",
+          "Valor": "21"
+        },
+        {
+          "Sección": "RRHH",
+          "Campo": "Registros con NoLaborado (menciones)",
+          "Valor": "0"
+        },
+        {
+          "Sección": "RRHH",
+          "Campo": "Ajustes manuales aplicados",
+          "Valor": "0"
+        },
+        {
+          "Sección": "SIN_ID",
+          "Campo": "Total SIN ID",
+          "Valor": "0"
+        }
+      ]
+    }
+  },
+  "IDGRUPO": {
+    "Reporte": {
+      "columns": [
+        "IDGRUPO",
+        "Fecha",
+        "Nombre",
+        "Pases",
+        "NoLaborado",
+        "Entrada",
+        "Salida a comer",
+        "Regreso de comer",
+        "Salida a cenar",
+        "Regreso de cenar",
+        "Salida",
+        "Horas trabajadas",
+        "Horas extra",
+        "Notas",
+        "Ajuste manual",
+        "Nota ajuste"
+      ],
+      "row_count": 7,
+      "rows": [
+        {
+          "IDGRUPO": "000-003",
+          "Fecha": "2026-01-28",
+          "Nombre": "Empleado A",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "09:00",
+          "Salida a comer": "13:00",
+          "Regreso de comer": "13:30",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "18:00",
+          "Horas trabajadas": "08:30",
+          "Horas extra": "00:30",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        },
+        {
+          "IDGRUPO": "000-003",
+          "Fecha": "2026-01-29",
+          "Nombre": "Empleado A",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "09:05",
+          "Salida a comer": "13:05",
+          "Regreso de comer": "13:35",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "18:10",
+          "Horas trabajadas": "08:35",
+          "Horas extra": "00:35",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        },
+        {
+          "IDGRUPO": "000-999",
+          "Fecha": "2026-01-28",
+          "Nombre": "Empleado X",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "09:00",
+          "Salida a comer": "",
+          "Regreso de comer": "",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "",
+          "Horas trabajadas": "00:00",
+          "Horas extra": "00:00",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        },
+        {
+          "IDGRUPO": "F-115",
+          "Fecha": "2026-01-28",
+          "Nombre": "Empleado B",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "22:00",
+          "Salida a comer": "",
+          "Regreso de comer": "",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "02:00",
+          "Horas trabajadas": "04:00",
+          "Horas extra": "00:00",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        },
+        {
+          "IDGRUPO": "F-115",
+          "Fecha": "2026-01-29",
+          "Nombre": "Empleado B",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "22:10",
+          "Salida a comer": "",
+          "Regreso de comer": "",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "02:05",
+          "Horas trabajadas": "03:55",
+          "Horas extra": "00:00",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        },
+        {
+          "IDGRUPO": "FT-124",
+          "Fecha": "2026-01-28",
+          "Nombre": "Empleado C",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "09:00",
+          "Salida a comer": "",
+          "Regreso de comer": "",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "18:00",
+          "Horas trabajadas": "09:00",
+          "Horas extra": "01:00",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        },
+        {
+          "IDGRUPO": "FT-124",
+          "Fecha": "2026-01-29",
+          "Nombre": "Empleado C",
+          "Pases": "1",
+          "NoLaborado": "",
+          "Entrada": "09:00",
+          "Salida a comer": "",
+          "Regreso de comer": "",
+          "Salida a cenar": "",
+          "Regreso de cenar": "",
+          "Salida": "13:00",
+          "Horas trabajadas": "04:00",
+          "Horas extra": "00:00",
+          "Notas": "",
+          "Ajuste manual": "",
+          "Nota ajuste": ""
+        }
+      ]
+    },
+    "RESUMEN_SEMANAL": {
+      "columns": [
+        "IDGRUPO",
+        "Nombre",
+        "Semana",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+        "Domingo",
+        "Lunes",
+        "Martes",
+        "Dias_presentes",
+        "Total horas trabajadas",
+        "Total horas extra",
+        "Faltas",
+        "Rango semana"
+      ],
+      "row_count": 4,
+      "rows": [
+        {
+          "IDGRUPO": "000-003",
+          "Nombre": "Empleado A",
+          "Semana": "2026-WK-20260128",
+          "Miércoles": "08:30",
+          "Jueves": "08:35",
+          "Viernes": "",
+          "Sábado": "",
+          "Domingo": "",
+          "Lunes": "",
+          "Martes": "",
+          "Dias_presentes": "2",
+          "Total horas trabajadas": "17:05",
+          "Total horas extra": "01:05",
+          "Faltas": "5",
+          "Rango semana": "2026-01-28 a 2026-02-03"
+        },
+        {
+          "IDGRUPO": "000-999",
+          "Nombre": "Empleado X",
+          "Semana": "2026-WK-20260128",
+          "Miércoles": "00:00",
+          "Jueves": "",
+          "Viernes": "",
+          "Sábado": "",
+          "Domingo": "",
+          "Lunes": "",
+          "Martes": "",
+          "Dias_presentes": "1",
+          "Total horas trabajadas": "00:00",
+          "Total horas extra": "00:00",
+          "Faltas": "6",
+          "Rango semana": "2026-01-28 a 2026-02-03"
+        },
+        {
+          "IDGRUPO": "F-115",
+          "Nombre": "Empleado B",
+          "Semana": "2026-WK-20260128",
+          "Miércoles": "04:00",
+          "Jueves": "03:55",
+          "Viernes": "",
+          "Sábado": "",
+          "Domingo": "",
+          "Lunes": "",
+          "Martes": "",
+          "Dias_presentes": "2",
+          "Total horas trabajadas": "07:55",
+          "Total horas extra": "00:00",
+          "Faltas": "5",
+          "Rango semana": "2026-01-28 a 2026-02-03"
+        },
+        {
+          "IDGRUPO": "FT-124",
+          "Nombre": "Empleado C",
+          "Semana": "2026-WK-20260128",
+          "Miércoles": "09:00",
+          "Jueves": "04:00",
+          "Viernes": "",
+          "Sábado": "",
+          "Domingo": "",
+          "Lunes": "",
+          "Martes": "",
+          "Dias_presentes": "2",
+          "Total horas trabajadas": "13:00",
+          "Total horas extra": "01:00",
+          "Faltas": "5",
+          "Rango semana": "2026-01-28 a 2026-02-03"
+        }
+      ]
+    },
+    "RESUMEN_MENSUAL": {
+      "columns": [
+        "IDGRUPO",
+        "Nombre",
+        "Mes",
+        "Dias_presentes",
+        "Total horas trabajadas",
+        "Total horas extra",
+        "Faltas"
+      ],
+      "row_count": 4,
+      "rows": [
+        {
+          "IDGRUPO": "000-003",
+          "Nombre": "Empleado A",
+          "Mes": "2026-01",
+          "Dias_presentes": "2",
+          "Total horas trabajadas": "17:05",
+          "Total horas extra": "01:05",
+          "Faltas": "2"
+        },
+        {
+          "IDGRUPO": "000-999",
+          "Nombre": "Empleado X",
+          "Mes": "2026-01",
+          "Dias_presentes": "1",
+          "Total horas trabajadas": "00:00",
+          "Total horas extra": "00:00",
+          "Faltas": "3"
+        },
+        {
+          "IDGRUPO": "F-115",
+          "Nombre": "Empleado B",
+          "Mes": "2026-01",
+          "Dias_presentes": "2",
+          "Total horas trabajadas": "07:55",
+          "Total horas extra": "00:00",
+          "Faltas": "2"
+        },
+        {
+          "IDGRUPO": "FT-124",
+          "Nombre": "Empleado C",
+          "Mes": "2026-01",
+          "Dias_presentes": "2",
+          "Total horas trabajadas": "13:00",
+          "Total horas extra": "01:00",
+          "Faltas": "2"
+        }
+      ]
+    },
+    "DETALLE_FALTAS": {
+      "columns": [
+        "IDGRUPO",
+        "Nombre",
+        "Fecha",
+        "Semana",
+        "Mes"
+      ],
+      "row_count": 21,
+      "rows": [
+        {
+          "IDGRUPO": "000-003",
+          "Nombre": "Empleado A",
+          "Fecha": "2026-01-30",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "IDGRUPO": "000-003",
+          "Nombre": "Empleado A",
+          "Fecha": "2026-01-31",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "IDGRUPO": "000-003",
+          "Nombre": "Empleado A",
+          "Fecha": "2026-02-01",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "IDGRUPO": "000-003",
+          "Nombre": "Empleado A",
+          "Fecha": "2026-02-02",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "IDGRUPO": "000-003",
+          "Nombre": "Empleado A",
+          "Fecha": "2026-02-03",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "IDGRUPO": "000-999",
+          "Nombre": "Empleado X",
+          "Fecha": "2026-01-29",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "IDGRUPO": "000-999",
+          "Nombre": "Empleado X",
+          "Fecha": "2026-01-30",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "IDGRUPO": "000-999",
+          "Nombre": "Empleado X",
+          "Fecha": "2026-01-31",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "IDGRUPO": "000-999",
+          "Nombre": "Empleado X",
+          "Fecha": "2026-02-01",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "IDGRUPO": "000-999",
+          "Nombre": "Empleado X",
+          "Fecha": "2026-02-02",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "IDGRUPO": "000-999",
+          "Nombre": "Empleado X",
+          "Fecha": "2026-02-03",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "IDGRUPO": "F-115",
+          "Nombre": "Empleado B",
+          "Fecha": "2026-01-30",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "IDGRUPO": "F-115",
+          "Nombre": "Empleado B",
+          "Fecha": "2026-01-31",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "IDGRUPO": "F-115",
+          "Nombre": "Empleado B",
+          "Fecha": "2026-02-01",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "IDGRUPO": "F-115",
+          "Nombre": "Empleado B",
+          "Fecha": "2026-02-02",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "IDGRUPO": "F-115",
+          "Nombre": "Empleado B",
+          "Fecha": "2026-02-03",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "IDGRUPO": "FT-124",
+          "Nombre": "Empleado C",
+          "Fecha": "2026-01-30",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "IDGRUPO": "FT-124",
+          "Nombre": "Empleado C",
+          "Fecha": "2026-01-31",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-01"
+        },
+        {
+          "IDGRUPO": "FT-124",
+          "Nombre": "Empleado C",
+          "Fecha": "2026-02-01",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "IDGRUPO": "FT-124",
+          "Nombre": "Empleado C",
+          "Fecha": "2026-02-02",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        },
+        {
+          "IDGRUPO": "FT-124",
+          "Nombre": "Empleado C",
+          "Fecha": "2026-02-03",
+          "Semana": "2026-WK-20260128",
+          "Mes": "2026-02"
+        }
+      ]
+    },
+    "INCIDENCIAS": {
+      "columns": [
+        "IDGRUPO",
+        "Fecha",
+        "Nombre",
+        "Notas"
+      ],
+      "row_count": 1,
+      "rows": [
+        {
+          "IDGRUPO": "FT-124",
+          "Fecha": "2026-01-28",
+          "Nombre": "Empleado C",
+          "Notas": ""
+        }
+      ]
+    },
+    "RESUM_SEM_CHECADAS": {
+      "columns": [
+        "IDGRUPO",
+        "Nombre",
+        "Semana",
+        "Mié 28/01 Entrada",
+        "Mié 28/01 Salida a comer",
+        "Mié 28/01 Regreso de comer",
+        "Mié 28/01 Salida a cenar",
+        "Mié 28/01 Regreso de cenar",
+        "Mié 28/01 Salida",
+        "Jue 29/01 Entrada",
+        "Jue 29/01 Salida a comer",
+        "Jue 29/01 Regreso de comer",
+        "Jue 29/01 Salida a cenar",
+        "Jue 29/01 Regreso de cenar",
+        "Jue 29/01 Salida"
+      ],
+      "row_count": 4,
+      "rows": [
+        {
+          "IDGRUPO": "000-003",
+          "Nombre": "Empleado A",
+          "Semana": "2026-01-28 a 2026-02-03",
+          "Mié 28/01 Entrada": "09:00",
+          "Mié 28/01 Salida a comer": "13:00",
+          "Mié 28/01 Regreso de comer": "13:30",
+          "Mié 28/01 Salida a cenar": "",
+          "Mié 28/01 Regreso de cenar": "",
+          "Mié 28/01 Salida": "18:00",
+          "Jue 29/01 Entrada": "09:05",
+          "Jue 29/01 Salida a comer": "13:05",
+          "Jue 29/01 Regreso de comer": "13:35",
+          "Jue 29/01 Salida a cenar": "",
+          "Jue 29/01 Regreso de cenar": "",
+          "Jue 29/01 Salida": "18:10"
+        },
+        {
+          "IDGRUPO": "000-999",
+          "Nombre": "Empleado X",
+          "Semana": "2026-01-28 a 2026-02-03",
+          "Mié 28/01 Entrada": "09:00",
+          "Mié 28/01 Salida a comer": "",
+          "Mié 28/01 Regreso de comer": "",
+          "Mié 28/01 Salida a cenar": "",
+          "Mié 28/01 Regreso de cenar": "",
+          "Mié 28/01 Salida": "",
+          "Jue 29/01 Entrada": "",
+          "Jue 29/01 Salida a comer": "",
+          "Jue 29/01 Regreso de comer": "",
+          "Jue 29/01 Salida a cenar": "",
+          "Jue 29/01 Regreso de cenar": "",
+          "Jue 29/01 Salida": ""
+        },
+        {
+          "IDGRUPO": "F-115",
+          "Nombre": "Empleado B",
+          "Semana": "2026-01-28 a 2026-02-03",
+          "Mié 28/01 Entrada": "22:00",
+          "Mié 28/01 Salida a comer": "",
+          "Mié 28/01 Regreso de comer": "",
+          "Mié 28/01 Salida a cenar": "",
+          "Mié 28/01 Regreso de cenar": "",
+          "Mié 28/01 Salida": "02:00",
+          "Jue 29/01 Entrada": "22:10",
+          "Jue 29/01 Salida a comer": "",
+          "Jue 29/01 Regreso de comer": "",
+          "Jue 29/01 Salida a cenar": "",
+          "Jue 29/01 Regreso de cenar": "",
+          "Jue 29/01 Salida": "02:05"
+        },
+        {
+          "IDGRUPO": "FT-124",
+          "Nombre": "Empleado C",
+          "Semana": "2026-01-28 a 2026-02-03",
+          "Mié 28/01 Entrada": "09:00",
+          "Mié 28/01 Salida a comer": "",
+          "Mié 28/01 Regreso de comer": "",
+          "Mié 28/01 Salida a cenar": "",
+          "Mié 28/01 Regreso de cenar": "",
+          "Mié 28/01 Salida": "18:00",
+          "Jue 29/01 Entrada": "09:00",
+          "Jue 29/01 Salida a comer": "",
+          "Jue 29/01 Regreso de comer": "",
+          "Jue 29/01 Salida a cenar": "",
+          "Jue 29/01 Regreso de cenar": "",
+          "Jue 29/01 Salida": "13:00"
+        }
+      ]
+    },
+    "CONTROL": {
+      "columns": [
+        "Sección",
+        "Campo",
+        "Valor"
+      ],
+      "row_count": 11,
+      "rows": [
+        {
+          "Sección": "EJECUCION",
+          "Campo": "run_id",
+          "Valor": ""
+        },
+        {
+          "Sección": "EJECUCION",
+          "Campo": "started_at",
+          "Valor": ""
+        },
+        {
+          "Sección": "EJECUCION",
+          "Campo": "version",
+          "Valor": "19.0.0-migracion"
+        },
+        {
+          "Sección": "EJECUCION",
+          "Campo": "input_sha256",
+          "Valor": ""
+        },
+        {
+          "Sección": "AUDITORIA",
+          "Campo": "Ediciones registradas",
+          "Valor": "0"
+        },
+        {
+          "Sección": "RESUMEN",
+          "Campo": "Filas en Reporte",
+          "Valor": "7"
+        },
+        {
+          "Sección": "RESUMEN",
+          "Campo": "Incidencias RRHH",
+          "Valor": "0"
+        },
+        {
+          "Sección": "RESUMEN",
+          "Campo": "Faltas (detalle)",
+          "Valor": "21"
+        },
+        {
+          "Sección": "RRHH",
+          "Campo": "Registros con NoLaborado (menciones)",
+          "Valor": "0"
+        },
+        {
+          "Sección": "RRHH",
+          "Campo": "Ajustes manuales aplicados",
+          "Valor": "0"
+        },
+        {
+          "Sección": "SIN_ID",
+          "Campo": "Total SIN ID",
+          "Valor": "0"
+        }
+      ]
+    }
+  }
+}

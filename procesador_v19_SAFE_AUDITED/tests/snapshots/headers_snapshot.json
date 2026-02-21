@@ -1,0 +1,138 @@
+{
+  "PROCESADO": {
+    "Reporte": [
+      "ID",
+      "Nombre",
+      "Fecha",
+      "Horas trabajadas",
+      "Horas extra",
+      "Entrada",
+      "Salida a comer",
+      "Regreso de comer",
+      "Salida a cenar",
+      "Regreso de cenar",
+      "Salida"
+    ],
+    "RESUMEN_SEMANAL": [
+      "ID",
+      "Nombre",
+      "Semana",
+      "Miércoles",
+      "Jueves",
+      "Viernes",
+      "Sábado",
+      "Domingo",
+      "Lunes",
+      "Martes",
+      "Dias_presentes",
+      "Total horas trabajadas",
+      "Total horas extra",
+      "Faltas",
+      "Rango semana"
+    ],
+    "RESUMEN_MENSUAL": [
+      "ID",
+      "Nombre",
+      "Mes",
+      "Dias_presentes",
+      "Total horas trabajadas",
+      "Total horas extra",
+      "Faltas"
+    ],
+    "RESUMEN_SEMANAL_VERTICAL": [
+      "ID",
+      "Nombre",
+      "Semana",
+      "Dias_presentes",
+      "Total horas trabajadas",
+      "Total horas extra",
+      "Faltas",
+      "Rango semana"
+    ],
+    "RESUM_SEM_CHECADAS": [
+      "ID",
+      "Nombre",
+      "Semana",
+      "Mié 28/01 Entrada",
+      "Mié 28/01 Salida a comer",
+      "Mié 28/01 Regreso de comer",
+      "Mié 28/01 Salida a cenar",
+      "Mié 28/01 Regreso de cenar",
+      "Mié 28/01 Salida",
+      "Jue 29/01 Entrada",
+      "Jue 29/01 Salida a comer",
+      "Jue 29/01 Regreso de comer",
+      "Jue 29/01 Salida a cenar",
+      "Jue 29/01 Regreso de cenar",
+      "Jue 29/01 Salida"
+    ]
+  },
+  "IDGRUPO": {
+    "Reporte": [
+      "IDGRUPO",
+      "Nombre",
+      "Fecha",
+      "Horas trabajadas",
+      "Horas extra",
+      "Entrada",
+      "Salida a comer",
+      "Regreso de comer",
+      "Salida a cenar",
+      "Regreso de cenar",
+      "Salida"
+    ],
+    "RESUMEN_SEMANAL": [
+      "IDGRUPO",
+      "Nombre",
+      "Semana",
+      "Miércoles",
+      "Jueves",
+      "Viernes",
+      "Sábado",
+      "Domingo",
+      "Lunes",
+      "Martes",
+      "Dias_presentes",
+      "Total horas trabajadas",
+      "Total horas extra",
+      "Faltas",
+      "Rango semana"
+    ],
+    "RESUMEN_MENSUAL": [
+      "IDGRUPO",
+      "Nombre",
+      "Mes",
+      "Dias_presentes",
+      "Total horas trabajadas",
+      "Total horas extra",
+      "Faltas"
+    ],
+    "RESUMEN_SEMANAL_VERTICAL": [
+      "IDGRUPO",
+      "Nombre",
+      "Semana",
+      "Dias_presentes",
+      "Total horas trabajadas",
+      "Total horas extra",
+      "Faltas",
+      "Rango semana"
+    ],
+    "RESUM_SEM_CHECADAS": [
+      "IDGRUPO",
+      "Nombre",
+      "Semana",
+      "Mié 28/01 Entrada",
+      "Mié 28/01 Salida a comer",
+      "Mié 28/01 Regreso de comer",
+      "Mié 28/01 Salida a cenar",
+      "Mié 28/01 Regreso de cenar",
+      "Mié 28/01 Salida",
+      "Jue 29/01 Entrada",
+      "Jue 29/01 Salida a comer",
+      "Jue 29/01 Regreso de comer",
+      "Jue 29/01 Salida a cenar",
+      "Jue 29/01 Regreso de cenar",
+      "Jue 29/01 Salida"
+    ]
+  }
+}

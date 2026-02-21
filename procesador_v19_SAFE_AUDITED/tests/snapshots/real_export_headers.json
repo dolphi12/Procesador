@@ -1,0 +1,152 @@
+{
+  "PROCESADO": {
+    "Reporte": [
+      "ID",
+      "Fecha",
+      "Nombre",
+      "Pases",
+      "NoLaborado",
+      "Entrada",
+      "Salida a comer",
+      "Regreso de comer",
+      "Salida a cenar",
+      "Regreso de cenar",
+      "Salida",
+      "Horas trabajadas",
+      "Horas extra",
+      "Notas",
+      "Ajuste manual",
+      "Nota ajuste"
+    ],
+    "RESUMEN_SEMANAL": [
+      "ID",
+      "Nombre",
+      "Semana",
+      "Miércoles",
+      "Jueves",
+      "Viernes",
+      "Sábado",
+      "Domingo",
+      "Lunes",
+      "Martes",
+      "Dias_presentes",
+      "Total horas trabajadas",
+      "Total horas extra",
+      "Faltas",
+      "Rango semana"
+    ],
+    "RESUMEN_MENSUAL": [
+      "ID",
+      "Nombre",
+      "Mes",
+      "Dias_presentes",
+      "Total horas trabajadas",
+      "Total horas extra",
+      "Faltas"
+    ],
+    "DETALLE_FALTAS": [
+      "ID",
+      "Nombre",
+      "Fecha",
+      "Semana",
+      "Mes"
+    ],
+    "RESUM_SEM_CHECADAS": [
+      "ID",
+      "Nombre",
+      "Semana",
+      "Mié 28/01 Entrada",
+      "Mié 28/01 Salida a comer",
+      "Mié 28/01 Regreso de comer",
+      "Mié 28/01 Salida a cenar",
+      "Mié 28/01 Regreso de cenar",
+      "Mié 28/01 Salida",
+      "Jue 29/01 Entrada",
+      "Jue 29/01 Salida a comer",
+      "Jue 29/01 Regreso de comer",
+      "Jue 29/01 Salida a cenar",
+      "Jue 29/01 Regreso de cenar",
+      "Jue 29/01 Salida"
+    ],
+    "CONTROL": [
+      "Sección",
+      "Campo",
+      "Valor"
+    ]
+  },
+  "IDGRUPO": {
+    "Reporte": [
+      "IDGRUPO",
+      "Fecha",
+      "Nombre",
+      "Pases",
+      "NoLaborado",
+      "Entrada",
+      "Salida a comer",
+      "Regreso de comer",
+      "Salida a cenar",
+      "Regreso de cenar",
+      "Salida",
+      "Horas trabajadas",
+      "Horas extra",
+      "Notas",
+      "Ajuste manual",
+      "Nota ajuste"
+    ],
+    "RESUMEN_SEMANAL": [
+      "IDGRUPO",
+      "Nombre",
+      "Semana",
+      "Miércoles",
+      "Jueves",
+      "Viernes",
+      "Sábado",
+      "Domingo",
+      "Lunes",
+      "Martes",
+      "Dias_presentes",
+      "Total horas trabajadas",
+      "Total horas extra",
+      "Faltas",
+      "Rango semana"
+    ],
+    "RESUMEN_MENSUAL": [
+      "IDGRUPO",
+      "Nombre",
+      "Mes",
+      "Dias_presentes",
+      "Total horas trabajadas",
+      "Total horas extra",
+      "Faltas"
+    ],
+    "DETALLE_FALTAS": [
+      "IDGRUPO",
+      "Nombre",
+      "Fecha",
+      "Semana",
+      "Mes"
+    ],
+    "RESUM_SEM_CHECADAS": [
+      "IDGRUPO",
+      "Nombre",
+      "Semana",
+      "Mié 28/01 Entrada",
+      "Mié 28/01 Salida a comer",
+      "Mié 28/01 Regreso de comer",
+      "Mié 28/01 Salida a cenar",
+      "Mié 28/01 Regreso de cenar",
+      "Mié 28/01 Salida",
+      "Jue 29/01 Entrada",
+      "Jue 29/01 Salida a comer",
+      "Jue 29/01 Regreso de comer",
+      "Jue 29/01 Salida a cenar",
+      "Jue 29/01 Regreso de cenar",
+      "Jue 29/01 Salida"
+    ],
+    "CONTROL": [
+      "Sección",
+      "Campo",
+      "Valor"
+    ]
+  }
+}

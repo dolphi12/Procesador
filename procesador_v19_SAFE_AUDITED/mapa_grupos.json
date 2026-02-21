@@ -1,0 +1,81 @@
+{
+  "grupos_orden": [
+    "000"
+  ],
+  "grupos_meta": {
+    "000": {
+      "prefijo": "000"
+    }
+  },
+  "empleado_a_grupo": {},
+  "empleado_a_idgrupo": {},
+  "empleado_status": {},
+  "empleado_meta": {},
+  "reglas": {
+    "umbral_extra_min": 480,
+    "redondeo_extra_step_min": 1,
+    "redondeo_extra_modo": "none",
+    "tope_descuento_comida_min": 30,
+    "id_min_width": 3,
+    "week_start_dow": 2,
+    "dayfirst": true,
+    "umbral_comida_media_hora_min": 60
+  },
+  "audit": {
+    "app_name": "procesador",
+    "audit_dir_name": "auditoria",
+    "audit_index_filename": "auditoria_index.jsonl",
+    "audit_changes_filename": "auditoria_cambios.jsonl",
+    "audit_key_filename": "audit_key.txt",
+    "audit_key_storage": "script",
+    "audit_key_dir": "",
+    "audit_signing_enabled": true,
+    "audit_rotate_max_bytes": 5000000,
+    "no_interactive_default": false
+  },
+  "excel": {
+    "idgrupo_split_by_group": false,
+    "column_widths": {
+      "Ajuste manual": 14,
+      "Campo": 22,
+      "Dias_presentes": 14,
+      "Entrada": 14,
+      "Fecha": 12,
+      "Faltas": 14,
+      "Horas extra": 18,
+      "Horas trabajadas": 18,
+      "ID": 12,
+      "IDGRUPO": 12,
+      "Mes": 10,
+      "Miércoles": 14,
+      "Nombre": 32,
+      "Nota ajuste": 30,
+      "Notas": 30,
+      "Observaciones": 26,
+      "Pases": 10,
+      "Rango semana": 16,
+      "Registro": 34,
+      "Regreso de cenar": 14,
+      "Regreso de comer": 14,
+      "Salida": 14,
+      "Salida a cenar": 14,
+      "Salida a comer": 14,
+      "Sábado": 14,
+      "Semana": 10,
+      "Total horas extra": 18,
+      "Total horas trabajadas": 18,
+      "Valor": 22,
+      "Viernes": 14,
+      "Domingo": 14,
+      "Jueves": 14,
+      "Lunes": 14,
+      "Martes": 14
+    },
+    "column_width_patterns": [
+      {
+        "pattern": "^(Lun|Mar|Mié|Jue|Vie|Sáb|Dom)\\s+\\d{2}/\\d{2}\\s+",
+        "width": 20
+      }
+    ]
+  }
+}

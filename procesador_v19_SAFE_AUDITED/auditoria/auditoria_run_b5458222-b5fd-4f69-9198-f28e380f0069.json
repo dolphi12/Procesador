@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "run_id": "b5458222-b5fd-4f69-9198-f28e380f0069",
+    "started_at": "2026-02-01T23:02:25",
+    "version": "19.0.0-migracion",
+    "entrada": "/mnt/data/ordered_export_all_sheets/input_prefijos_faltas.xlsx",
+    "input_sha256": "f026b2221cb699f8fb8dae3de8ab0945eac73e5e8127f3f56629f61eee7cffb9",
+    "usuario": "SELFTEST",
+    "modo_seguro": false,
+    "edicion_interactiva": false,
+    "plantilla_path": ""
+  },
+  "entries": [],
+  "signature_algo": "HMAC-SHA256",
+  "key_id": "f07dbeed",
+  "signature": "8f0fcba68b789c38d5f3ac5da8011b36a2f85307e8314532ee14b78384f50e6e"
+}

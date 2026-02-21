@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "run_id": "cf4bd588-272f-40bd-ae16-a1cd5e8d525e",
+    "started_at": "2026-02-01T07:09:59",
+    "version": "19.0.0-migracion",
+    "entrada": "/mnt/data/build/demo_input.xlsx",
+    "input_sha256": "45385b01c94b6a9b3e0e89997fd94183ad915fc815fee487bf22e9d8e12bbe34",
+    "usuario": "SELFTEST",
+    "modo_seguro": false,
+    "edicion_interactiva": false,
+    "plantilla_path": ""
+  },
+  "entries": [],
+  "signature_algo": "HMAC-SHA256",
+  "key_id": "52da1d31",
+  "signature": "21292082a5c7a1042ccf868297c3cecae79f4bb518399138d26c69b48c6d3da8"
+}

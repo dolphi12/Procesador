@@ -1,0 +1,90 @@
+{
+  "PROCESADO": {
+    "Reporte": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:P8",
+      "header_bold": true,
+      "id_number_format": "@"
+    },
+    "RESUMEN_SEMANAL": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:O5",
+      "header_bold": true,
+      "id_number_format": "@"
+    },
+    "RESUMEN_MENSUAL": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:G5",
+      "header_bold": true,
+      "id_number_format": "@"
+    },
+    "DETALLE_FALTAS": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:E22",
+      "header_bold": true,
+      "id_number_format": "@"
+    },
+    "INCIDENCIAS": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:D2",
+      "header_bold": true,
+      "id_number_format": "@"
+    },
+    "RESUM_SEM_CHECADAS": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:O5",
+      "header_bold": true,
+      "id_number_format": "@"
+    },
+    "CONTROL": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:C12",
+      "header_bold": true,
+      "id_number_format": ""
+    }
+  },
+  "IDGRUPO": {
+    "Reporte": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:P8",
+      "header_bold": true,
+      "id_number_format": ""
+    },
+    "RESUMEN_SEMANAL": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:O5",
+      "header_bold": true,
+      "id_number_format": ""
+    },
+    "RESUMEN_MENSUAL": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:G5",
+      "header_bold": true,
+      "id_number_format": ""
+    },
+    "DETALLE_FALTAS": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:E22",
+      "header_bold": true,
+      "id_number_format": ""
+    },
+    "INCIDENCIAS": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:D2",
+      "header_bold": true,
+      "id_number_format": ""
+    },
+    "RESUM_SEM_CHECADAS": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:O5",
+      "header_bold": true,
+      "id_number_format": ""
+    },
+    "CONTROL": {
+      "freeze_panes": "A2",
+      "autofilter": "A1:C12",
+      "header_bold": true,
+      "id_number_format": ""
+    }
+  }
+}
