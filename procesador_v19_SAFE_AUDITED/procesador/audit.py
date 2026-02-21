@@ -15,7 +15,11 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Iterable, Optional
 
+import logging
+
 from .utils import chmod_restringido, harden_permissions
+
+_log = logging.getLogger("procesador.audit")
 
 CONTROL_CHARS = {chr(i) for i in range(0, 32)} - {"\t"}
 
@@ -47,7 +51,7 @@ def ensure_dir_secure(d: Path) -> None:
     try:
         chmod_restringido(d)
     except Exception:
-        pass
+        _log.debug("No se pudo endurecer permisos de %s", d, exc_info=True)
 
 
 def log_change(
@@ -70,7 +74,7 @@ def log_change(
             path.rename(rotated)
             harden_permissions(rotated)
     except Exception:
-        pass
+        _log.debug("No se pudo rotar archivo de auditoría %s", path, exc_info=True)
 
     rec = sanitize_record(record)
     with open(path, "a", encoding="utf-8") as f:

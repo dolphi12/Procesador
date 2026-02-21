@@ -59,7 +59,7 @@ def _sanitize_excel_injection(df: pd.DataFrame) -> pd.DataFrame:
         return df
     out = df.copy()
     for col in out.columns:
-        if str(out[col].dtype) not in ("object", "string"):
+        if not pd.api.types.is_string_dtype(out[col]):
             continue
         ser = out[col]
         def _fix(v):

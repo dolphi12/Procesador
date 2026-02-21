@@ -2,10 +2,13 @@
 
 from __future__ import annotations
 
+import logging
 from datetime import datetime, timedelta, time
 from typing import Dict, List, Optional, Tuple
 
 from .config import AppConfig
+
+_log = logging.getLogger("procesador.core")
 
 __all__ = [
     "add_minutes",
@@ -241,7 +244,7 @@ def calcular_trabajado(eventos: Dict[str, Optional[time]], cfg: AppConfig, no_la
                 try:
                     ignored_outside_shift += minutos_entre(ini, fin_eff)
                 except Exception:
-                    pass
+                    _log.debug("Error calculando intervalo ignorado fuera de jornada", exc_info=True)
                 continue
             ini_c, fin_c, ign = clipped
             ignored_outside_shift += ign
