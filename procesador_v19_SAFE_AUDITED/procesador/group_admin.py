@@ -219,14 +219,15 @@ def _delete_employee(processed_ids: Iterable[str], cfg: AppConfig, script_dir: P
     emp = _select_employee(processed_ids, cfg)
     if not emp:
         return
+    old_g = (cfg.empleado_a_grupo or {}).get(emp, "")
+    old_ig = (cfg.empleado_a_idgrupo or {}).get(emp, "")
+    old_st = (cfg.empleado_status or {}).get(emp, {})
+    activo_txt = "ACTIVO" if bool(old_st.get("activo", True)) else "BAJA"
+    print(f"\n  Grupo: {old_g or '-'} | IDGRUPO: {old_ig or '-'} | Estatus: {activo_txt}")
     confirm = _safe_input(f"Eliminar empleado {emp} del mapa (S/N): ", "N").strip().upper()
     if confirm != "S":
         return
-    old = {
-        "grupo": (cfg.empleado_a_grupo or {}).get(emp, ""),
-        "idgrupo": (cfg.empleado_a_idgrupo or {}).get(emp, ""),
-        "status": (cfg.empleado_status or {}).get(emp, {}),
-    }
+    old = {"grupo": old_g, "idgrupo": old_ig, "status": old_st}
     cfg.empleado_a_grupo.pop(emp, None)
     cfg.empleado_a_idgrupo.pop(emp, None)
     cfg.empleado_status.pop(emp, None)
@@ -299,10 +300,15 @@ def run_group_admin(
     script_dir = Path(script_dir)
     while True:
         missing = _list_missing(processed_ids, cfg)
+        total_mapped = len(cfg.empleado_a_grupo or {})
+        unique_proc = set(
+            str(x).strip()
+            for x in processed_ids or []
+            if str(x).strip() and not str(x).startswith("NOMBRE::")
+        )
         print("\n" + "="*90)
         print("ADMIN GRUPOS / IDGRUPO / ACTIVOS")
-        print(f"Empleados procesados: {len(set([str(x).strip() for x in processed_ids or [] if str(x).strip() and not str(x).startswith('NOMBRE::')]))}")
-        print(f"Sin mapa: {len(missing)}")
+        print(f"Empleados procesados: {len(unique_proc)} | En mapa: {total_mapped} | Sin mapa: {len(missing)}")
         print("="*90)
         print("Opciones:")
         print("")

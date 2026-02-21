@@ -935,7 +935,7 @@ def dashboard_revision_por_id(
                 usuario=usuario_editor,
                 audit_log=audit_log,
                 script_dir=script_dir,
-                processed_ids=processed_ids_for_dashboard,
+                processed_ids=processed_ids,
                 modo_seguro=modo_seguro,
                 no_labor=no_labor,
             )
