@@ -81,6 +81,16 @@ def build_parser() -> argparse.ArgumentParser:
     return p
 
 
+def _validate_file_path(path: Path, descripcion: str) -> bool:
+    if not path.exists():
+        print(f"ERROR: {descripcion} no encontrado: {path}")
+        return False
+    if path.is_dir():
+        print(f"ERROR: se esperaba un archivo para {descripcion}, no un directorio: {path}")
+        return False
+    return True
+
+
 def _cmd_process(args: argparse.Namespace) -> int:
     setup_logging(level=str(args.log_level).upper())
 
@@ -120,11 +130,7 @@ def _cmd_process(args: argparse.Namespace) -> int:
         in_path = rep.output_path
     else:
         in_path = Path(args.input_path)
-        if not in_path.exists():
-            print(f"ERROR: archivo de entrada no existe: {in_path}")
-            return 2
-        if in_path.is_dir():
-            print(f"ERROR: se esperaba un archivo, no un directorio: {in_path}")
+        if not _validate_file_path(in_path, "archivo de entrada"):
             return 2
 
     try:
@@ -173,11 +179,7 @@ def _cmd_verify_audit(args: argparse.Namespace) -> int:
     # localizar bundle
     if args.bundle_path:
         bundle = Path(args.bundle_path)
-        if not bundle.exists():
-            print(f"ERROR: bundle no encontrado: {bundle}")
-            return 2
-        if bundle.is_dir():
-            print(f"ERROR: se esperaba un archivo de bundle, no un directorio: {bundle}")
+        if not _validate_file_path(bundle, "bundle"):
             return 2
     else:
         base = Path(args.latest_dir)
@@ -218,11 +220,7 @@ def _cmd_verify_audit(args: argparse.Namespace) -> int:
         except ValueError:
             print("ERROR: bundle inválido en latest.json")
             return 2
-        if not bundle.exists():
-            print(f"ERROR: bundle no encontrado: {bundle}")
-            return 2
-        if bundle.is_dir():
-            print(f"ERROR: se esperaba un archivo de bundle, no un directorio: {bundle}")
+        if not _validate_file_path(bundle, "bundle"):
             return 2
 
     script_dir = Path(__file__).resolve().parent
