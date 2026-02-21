@@ -186,12 +186,22 @@ def _cmd_verify_audit(args: argparse.Namespace) -> int:
             return 2
         try:
             obj = json.loads(latest_text)
-            bundle_name = str(obj.get("bundle", ""))
+            raw_bundle = obj.get("bundle", "")
+            if not isinstance(raw_bundle, str):
+                raise ValueError("bundle no es string")
+            bundle_name = raw_bundle.strip()
         except json.JSONDecodeError:
             print("ERROR: latest.json inválido (JSON)")
             return 2
+        except ValueError:
+            print("ERROR: bundle inválido en latest.json")
+            return 2
         bundle_path = Path(bundle_name)
-        if bundle_path.is_absolute() or bundle_path.name != bundle_name or not bundle_name:
+        if (
+            not bundle_name
+            or bundle_path.is_absolute()
+            or ".." in bundle_path.parts
+        ):
             print("ERROR: bundle inválido en latest.json")
             return 2
         bundle = base / "auditoria" / bundle_path
