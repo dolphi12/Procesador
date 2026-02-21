@@ -180,19 +180,21 @@ def _cmd_verify_audit(args: argparse.Namespace) -> int:
             print(f"ERROR: no existe {latest}")
             return 2
         try:
-            obj = json.loads(latest.read_text(encoding="utf-8"))
-            bundle_name = str(obj.get("bundle", ""))
+            latest_text = latest.read_text(encoding="utf-8")
         except OSError:
             print(f"ERROR: no se pudo leer {latest}")
             return 2
+        try:
+            obj = json.loads(latest_text)
+            bundle_name = str(obj.get("bundle", ""))
         except json.JSONDecodeError:
             print("ERROR: latest.json inválido (JSON)")
             return 2
-        bundle_name = Path(bundle_name).name
-        if not bundle_name:
-            print("ERROR: campo bundle vacío en latest.json")
+        bundle_path = Path(bundle_name)
+        if bundle_path.is_absolute() or bundle_path.name != bundle_name or not bundle_name:
+            print("ERROR: bundle inválido en latest.json")
             return 2
-        bundle = base / "auditoria" / bundle_name
+        bundle = base / "auditoria" / bundle_path
         if not bundle.exists() or bundle.is_dir():
             print(f"ERROR: bundle no encontrado: {bundle}")
             return 2
