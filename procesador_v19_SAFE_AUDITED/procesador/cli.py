@@ -120,8 +120,11 @@ def _cmd_process(args: argparse.Namespace) -> int:
         in_path = rep.output_path
     else:
         in_path = Path(args.input_path)
-        if not in_path.exists() or in_path.is_dir():
+        if not in_path.exists():
             print(f"ERROR: archivo de entrada no existe: {in_path}")
+            return 2
+        if in_path.is_dir():
+            print(f"ERROR: se esperaba un archivo, no un directorio: {in_path}")
             return 2
 
     try:
@@ -170,8 +173,11 @@ def _cmd_verify_audit(args: argparse.Namespace) -> int:
     # localizar bundle
     if args.bundle_path:
         bundle = Path(args.bundle_path)
-        if not bundle.exists() or bundle.is_dir():
+        if not bundle.exists():
             print(f"ERROR: bundle no encontrado: {bundle}")
+            return 2
+        if bundle.is_dir():
+            print(f"ERROR: se esperaba un archivo de bundle, no un directorio: {bundle}")
             return 2
     else:
         base = Path(args.latest_dir)
@@ -212,8 +218,11 @@ def _cmd_verify_audit(args: argparse.Namespace) -> int:
         except ValueError:
             print("ERROR: bundle inválido en latest.json")
             return 2
-        if not bundle.exists() or bundle.is_dir():
+        if not bundle.exists():
             print(f"ERROR: bundle no encontrado: {bundle}")
+            return 2
+        if bundle.is_dir():
+            print(f"ERROR: se esperaba un archivo de bundle, no un directorio: {bundle}")
             return 2
 
     script_dir = Path(__file__).resolve().parent
