@@ -81,12 +81,12 @@ def build_parser() -> argparse.ArgumentParser:
     return p
 
 
-def _validate_file_path(path: Path, descripcion: str) -> bool:
+def _validate_file_path(path: Path, description: str) -> bool:
     if not path.exists():
-        print(f"ERROR: {descripcion} no encontrado: {path}")
+        print(f"ERROR: {description} no encontrado: {path}")
         return False
     if path.is_dir():
-        print(f"ERROR: se esperaba un archivo para {descripcion}, no un directorio: {path}")
+        print(f"ERROR: se esperaba un archivo para {description}, no un directorio: {path}")
         return False
     return True
 
