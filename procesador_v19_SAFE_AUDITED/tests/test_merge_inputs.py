@@ -49,3 +49,19 @@ def test_collect_inputs_pattern(tmp_path: Path) -> None:
     (tmp_path / "c.csv").write_text("z")
     files = collect_inputs(tmp_path, pattern="*.xlsx", recursive=False)
     assert [p.name for p in files] == ["a.xlsx", "b.xlsx"]
+
+
+def test_merge_inputs_no_dedupe_conserva_duplicados(tmp_path: Path) -> None:
+    df = pd.DataFrame(
+        [
+            {"ID": "1", "Nombre": "A", "Fecha": "2026-03-01", "Número de pases de la tarjeta": 1, "Registro": "08:00 17:00"},
+            {"ID": "1", "Nombre": "A", "Fecha": "2026-03-01", "Número de pases de la tarjeta": 1, "Registro": "08:00 17:00"},
+        ]
+    )
+    f = tmp_path / "dup.xlsx"
+    df.to_excel(f, index=False)
+    out = tmp_path / "merged_nodup.xlsx"
+    rep = merge_inputs([f], out, dedupe=False)
+    assert rep.duplicates_dropped == 0
+    merged = pd.read_excel(out)
+    assert len(merged) == 2
