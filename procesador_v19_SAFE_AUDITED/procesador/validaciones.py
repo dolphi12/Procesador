@@ -28,9 +28,10 @@ def validate_non_empty_string(value: object) -> str:
 def validate_positive_integer(value: object) -> int:
     """Validate that the value is a positive integer."""
     validate_input(value, int)
-    if value <= 0:
+    v = int(value)  # type: ignore[arg-type]  # validated above
+    if v <= 0:
         raise ValueError("Integer must be greater than zero.")
-    return value
+    return v
 
 
 def validate_range(value: int | float, min_value: int | float, max_value: int | float) -> int | float:

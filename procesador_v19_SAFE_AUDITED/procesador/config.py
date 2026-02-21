@@ -177,12 +177,12 @@ def cargar_config(script_dir: Path) -> AppConfig:
     except (TypeError, ValueError) as exc:
         log_exception(f"Valor inválido en config, usando defaults: {exc}", level=logging.WARNING)
         defaults = AppConfig()
-        cfg.umbral_extra_min = max(0, cfg.umbral_extra_min)
-        cfg.redondeo_extra_step_min = max(0, cfg.redondeo_extra_step_min)
-        cfg.tope_descuento_comida_min = max(0, cfg.tope_descuento_comida_min)
-        cfg.umbral_comida_media_hora_min = max(0, cfg.umbral_comida_media_hora_min)
-        cfg.id_min_width = max(0, cfg.id_min_width)
-        cfg.week_start_dow = cfg.week_start_dow % 7 if 0 <= cfg.week_start_dow else defaults.week_start_dow
+        cfg.umbral_extra_min = defaults.umbral_extra_min
+        cfg.redondeo_extra_step_min = defaults.redondeo_extra_step_min
+        cfg.tope_descuento_comida_min = defaults.tope_descuento_comida_min
+        cfg.umbral_comida_media_hora_min = defaults.umbral_comida_media_hora_min
+        cfg.id_min_width = defaults.id_min_width
+        cfg.week_start_dow = defaults.week_start_dow
 
     return cfg
 
