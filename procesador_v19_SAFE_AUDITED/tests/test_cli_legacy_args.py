@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 
-def test_cmd_process_handles_missing_audit_user(monkeypatch):
+def test_cmd_process_handles_missing_audit_user(monkeypatch, tmp_path):
     """Modo legacy puede no tener args.audit_user; no debe tronar."""
 
     from procesador import cli
@@ -13,10 +13,13 @@ def test_cmd_process_handles_missing_audit_user(monkeypatch):
 
     monkeypatch.setattr(cli, "procesar_archivo", _fake_procesar_archivo)
 
+    dummy_file = tmp_path / "dummy.xlsx"
+    dummy_file.write_text("x")
+
     class Args:
         log_level = "INFO"
         tests_only = False
-        input_path = "dummy.xlsx"
+        input_path = str(dummy_file)
         plantilla = ""
         edicion_interactiva = False
         usuario_editor = "RRHH"

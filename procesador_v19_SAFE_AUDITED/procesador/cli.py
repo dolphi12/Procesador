@@ -81,6 +81,16 @@ def build_parser() -> argparse.ArgumentParser:
     return p
 
 
+def _validate_file_path(path: Path, description: str) -> bool:
+    if not path.exists():
+        print(f"ERROR: {description} no encontrado: {path}")
+        return False
+    if path.is_dir():
+        print(f"ERROR: se esperaba un archivo para {description}, no un directorio: {path}")
+        return False
+    return True
+
+
 def _cmd_process(args: argparse.Namespace) -> int:
     setup_logging(level=str(args.log_level).upper())
 
@@ -120,6 +130,8 @@ def _cmd_process(args: argparse.Namespace) -> int:
         in_path = rep.output_path
     else:
         in_path = Path(args.input_path)
+        if not _validate_file_path(in_path, "archivo de entrada"):
+            return 2
 
     try:
         procesar_archivo(
@@ -167,11 +179,49 @@ def _cmd_verify_audit(args: argparse.Namespace) -> int:
     # localizar bundle
     if args.bundle_path:
         bundle = Path(args.bundle_path)
+        if not _validate_file_path(bundle, "bundle"):
+            return 2
     else:
         base = Path(args.latest_dir)
-        latest = base / "auditoria" / "latest.json"
-        obj = json.loads(latest.read_text(encoding="utf-8"))
-        bundle = base / "auditoria" / obj["bundle"]
+        audit_dir = base / "auditoria"
+        latest = audit_dir / "latest.json"
+        if not latest.exists():
+            print(f"ERROR: no existe {latest}")
+            return 2
+        try:
+            latest_text = latest.read_text(encoding="utf-8")
+        except OSError:
+            print(f"ERROR: no se pudo leer {latest}")
+            return 2
+        try:
+            obj = json.loads(latest_text)
+            bundle_name = obj.get("bundle", "")
+            if not isinstance(bundle_name, str):
+                raise ValueError("bundle debe ser una cadena de texto")
+            bundle_name = bundle_name.strip()
+        except json.JSONDecodeError:
+            print("ERROR: latest.json inválido (JSON)")
+            return 2
+        except ValueError:
+            print("ERROR: el campo bundle debe ser una cadena de texto en latest.json")
+            return 2
+        bundle_rel = Path(bundle_name)
+        if (
+            not bundle_name
+            or bundle_rel.is_absolute()
+            or ".." in bundle_rel.parts
+        ):
+            print("ERROR: bundle inválido en latest.json")
+            return 2
+        audit_dir_resolved = audit_dir.resolve()
+        bundle = (audit_dir / bundle_rel).resolve()
+        try:
+            bundle.relative_to(audit_dir_resolved)
+        except ValueError:
+            print("ERROR: bundle inválido en latest.json")
+            return 2
+        if not _validate_file_path(bundle, "bundle"):
+            return 2
 
     script_dir = Path(__file__).resolve().parent
     cfg = cargar_config(script_dir)
