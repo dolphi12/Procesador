@@ -47,6 +47,33 @@ def _read_input_file(path: Path) -> pd.DataFrame:
     return df
 
 
+def _normalize_colector_db(df: pd.DataFrame) -> pd.DataFrame:
+    """Adapta el formato de la base de datos (E01, E02...) al formato estándar."""
+    # 1. Renombrar columnas del formato DB al formato clásico
+    renames = {
+        "employee_id": "ID",
+        "employee_name": "Nombre",
+        "fecha_registro": "Fecha",
+    }
+    # Aplicar renombramiento tolerando mayúsculas/minúsculas
+    df = df.rename(columns=lambda c: renames.get(str(c).strip().lower(), str(c).strip()))
+
+    # 2. Construir columna Registro si hay columnas E01, E02, etc.
+    e_cols = sorted([c for c in df.columns if re.match(r"^E\d{2}$", str(c).strip().upper())])
+    if e_cols and not any(c.lower() == "registro" for c in df.columns):
+        def _build_registro(row):
+            horas = []
+            for c in e_cols:
+                val = str(row.get(c, "")).strip()
+                if val and val.lower() not in ('nan', 'none', 'nat'):
+                    horas.append(val)
+            return ", ".join(horas)
+        
+        df["Registro"] = df.apply(_build_registro, axis=1)
+
+    return df
+
+
 def _coerce_fecha_to_iso(df: pd.DataFrame) -> pd.DataFrame:
     if "Fecha" not in df.columns:
         return df
@@ -109,6 +136,10 @@ def merge_inputs(
     rows_in = 0
     for p in inputs:
         df = _read_input_file(p)
+        
+        # Adaptar formato DB (colector) al estándar antes de limpiar
+        df = _normalize_colector_db(df)
+        
         rows_in += int(len(df))
         df = _ensure_required(df)
         df = _coerce_fecha_to_iso(df)
